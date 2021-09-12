@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mergulhador_Andando2.png-db306bb7cf825a8fb1dc7dce05c62a89.stex"
+path="res://.import/border_gray.png-0f972ad1887b672d9209cd62cc454341.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mergulhador_Andando2.png"
-dest_files=[ "res://.import/Mergulhador_Andando2.png-db306bb7cf825a8fb1dc7dce05c62a89.stex" ]
+source_file="res://Assets/sprites/border_gray.png"
+dest_files=[ "res://.import/border_gray.png-0f972ad1887b672d9209cd62cc454341.stex" ]
 
 [params]
 

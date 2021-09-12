@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Peixe_Abissal_Nadando.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/abissal.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 110, 90 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 110, 0, 110, 90 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 220, 0, 110, 90 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 330, 0, 110, 90 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "nadando abissal",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 19.0831
+height = 31.9337
+
+[node name="peixeAbissal" type="RigidBody2D"]
+position = Vector2( 112.869, 116.901 )
+gravity_scale = 0.0
+script = ExtResource( 2 )
+
+[node name="animacao" type="AnimatedSprite" parent="."]
+position = Vector2( -1.03714, 1.82511 )
+frames = SubResource( 5 )
+animation = "New Anim"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.83795, 2.97303 )
+rotation = 1.5708
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -13.0813, 0.891911 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
