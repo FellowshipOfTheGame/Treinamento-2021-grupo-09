@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/background.png" type="Texture" id=1]
+[ext_resource path="res://scenes/background.gd" type="Script" id=2]
+
+[node name="scrolling_background" type="Node2D"]
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 240.015, 332.004 )
+scale = Vector2( 1.66668, 2.59362 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="background2" type="Sprite" parent="."]
+position = Vector2( 240.015, 996.004 )
+scale = Vector2( 1.66668, 2.59362 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
